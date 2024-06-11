@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music player</title>
+    <link rel="shortcut icon" href="#" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
         integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
         crossorigin="anonymous" />
@@ -54,7 +55,11 @@
             </div>
 
             <input id="progress" class="progress" type="range" value="0" step="1" min="0" max="100">
-
+            <div class="volume">
+                <span class="open">Volume ở đây nè =></span>
+                <i class="fa fa-volume-up volume-icon"></i>
+                <input type="range" id="volume" class="sound-bar" value="100" step="1" min="0" max="100">
+            </div>
             <audio id="audio" src=""></audio>
         </div>
 

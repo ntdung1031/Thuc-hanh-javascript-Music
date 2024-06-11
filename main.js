@@ -17,6 +17,7 @@ const prevBtn = $(".btn-prev");
 const randomBtn = $(".btn-random");
 const repeatBtn = $(".btn-repeat");
 const playList = $(".playlist")
+const volume = $('#volume')
 
 const app = {
     currentIndex: 0,
@@ -68,6 +69,27 @@ const app = {
             name: "Yêu em rất nhiều",
             singer: "Raftaar",
             path: "./assets/music/yeu-em-rat-nhieu.mp3",
+            image:
+                "https://a10.gaanacdn.com/images/albums/72/3019572/crop_480x480_3019572.jpg"
+        },
+        {
+            name: "Lửng lơ",
+            singer: "Raftaar",
+            path: "./assets/music/Lung-lo.mp3",
+            image:
+                "https://a10.gaanacdn.com/images/albums/72/3019572/crop_480x480_3019572.jpg"
+        },
+        {
+            name: "Thời gian sẽ trả lời",
+            singer: "Raftaar",
+            path: "./assets/music/Thoi-gian-se-tra-loi.mp3",
+            image:
+                "https://a10.gaanacdn.com/images/albums/72/3019572/crop_480x480_3019572.jpg"
+        },
+        {
+            name: "Lỗi duyên tại ý trời",
+            singer: "Raftaar",
+            path: "./assets/music/Loi-duyen-tai-y-troi.mp3",
             image:
                 "https://a10.gaanacdn.com/images/albums/72/3019572/crop_480x480_3019572.jpg"
         },
@@ -228,6 +250,14 @@ const app = {
 
                 }
             }
+        }
+        volume.oninput = function () {
+            audio.volume = volume.value / 100
+            volume.style.setProperty('--width-before-sound', `${volume.value}%`)
+        }
+        $('.volume-icon').onclick = function () {
+            volume.classList.toggle('open')
+            $('.volume span').classList.toggle('open')
         }
 
     },

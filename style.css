@@ -1,6 +1,7 @@
 :root {
     --primary-color: #ec1f55;
     --text-color: #333;
+    --width-before-sound:0px
   }
   
   * {
@@ -112,7 +113,7 @@
   .progress {
     width: 100%;
     -webkit-appearance: none;
-    height: 6px;
+    height: 8px;
     background: #d3d3d3;
     outline: none;
     opacity: 0.7;
@@ -128,6 +129,72 @@
     background-color: var(--primary-color);
     cursor: pointer;
   }
+  .volume-icon {
+    cursor: pointer;
+  }
+ /* Thiết lập cơ bản cho thanh trượt */
+.sound-bar {
+  -webkit-appearance: none; /* Loại bỏ kiểu mặc định */
+  width:12px;
+  /* height: 8px; */
+  background: #ddd;
+  border-radius: 5px;
+  outline: none;
+  position: relative;
+ display: none;
+}
+
+/* Thiết lập cho thumb (nút trượt) */
+.sound-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 3px;
+  height: 100%;
+  background: var(--primary-color);
+  cursor: pointer;
+  border-radius: 4px;
+  position: relative;
+}
+.sound-bar::-webkit-slider-thumb:hover {
+  opacity: 0.8;
+
+}
+/* Thiết lập cho track (đường chạy) */
+.sound-bar::-webkit-slider-runnable-track { 
+   /* width: 30px;  */
+  height: 80px;
+  cursor: pointer;
+  background: #ddd; 
+  border-radius: 2px; 
+}
+
+.sound-bar::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: var(--width-before-sound);
+  height: 100%;
+  background-color: var(--primary-color);
+  opacity: 0.7;
+  border-radius: 2px;
+}
+
+/* Để tùy chỉnh phần sau của thumb (phần chưa di chuyển) */
+/* .sound-bar::-webkit-slider-runnable-track::after {
+  content: '';
+  
+} */
+  .volume {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+.volume span {
+  display: none;
+}
+.volume .open {
+  display: block !important;
+}
   
   /* PLAYLIST */
   .playlist {
@@ -187,5 +254,8 @@
     padding: 16px 8px;
     color: #999;
     font-size: 18px;
+  }
+  .open {
+    display: block;
   }
   
