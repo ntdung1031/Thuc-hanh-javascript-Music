@@ -1,7 +1,7 @@
 :root {
     --primary-color: #ec1f55;
     --text-color: #333;
-    --width-before-sound:0px
+    --width-before-sound:100%;
   }
   
   * {
@@ -77,6 +77,7 @@
     background-color: #333;
     background-size: cover;
     margin: auto;
+    background-position: center;
   }
   
   /* CONTROL */

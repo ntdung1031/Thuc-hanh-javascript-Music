@@ -24,6 +24,7 @@ const app = {
     isPlaying: false,
     isRandom: false,
     isRepeat: false,
+    listSong: [],
     // (1/2) Uncomment the line below to use localStorage
     config: JSON.parse(localStorage.getItem(PlAYER_STORAGE_KEY)) || {},
     setConfig: function (key, value) {
@@ -225,13 +226,17 @@ const app = {
         // xử lí random bật tắt
         randomBtn.onclick = function (e) {
             _this.isRandom = !_this.isRandom
-            _this.setConfig('isRandom', _this.isRandom)
+            if (_this.isRandom) {
+                _this.listSong.push(_this.currentIndex)
+
+            }
+            // _this.setConfig('isRandom', _this.isRandom)
             randomBtn.classList.toggle('active', _this.isRandom)
         }
         // repeat button, Xử lí lặp lại 1 song 
         repeatBtn.onclick = function (e) {
             _this.isRepeat = !_this.isRepeat
-            _this.setConfig('isRepeat', _this.isRepeat)
+            // _this.setConfig('isRepeat', _this.isRepeat)
             repeatBtn.classList.toggle('active', _this.isRepeat)
         }
         playList.onclick = function (e) {
@@ -302,8 +307,13 @@ const app = {
         let newIndex
         do {
             newIndex = Math.floor(Math.random() * this.songs.length)
+        } while (newIndex === this.currentIndex || this.listSong.includes(newIndex))
+        this.listSong.push(newIndex)
+        if (this.listSong.length === this.songs.length) {
+            this.listSong = []
+        }
 
-        } while (newIndex === this.currentIndex)
+        console.log(this.listSong)
         this.currentIndex = newIndex
         this.loadCurrentSong()
     },
@@ -322,8 +332,8 @@ const app = {
         this.render()
 
         // hiển thị trạng thái ban đầu của btn repeat và random
-        randomBtn.classList.toggle('active', this.isRandom)
-        repeatBtn.classList.toggle('active', this.isRepeat)
+        // randomBtn.classList.toggle('active', this.isRandom)
+        // repeatBtn.classList.toggle('active', this.isRepeat)
     }
 }
 app.start()
