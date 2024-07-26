@@ -33,88 +33,127 @@ const app = {
     },
     songs: [
         {
-            name: "Anh chẳng thể",
+            name: "Thay thế",
             singer: "Raftaar x Salim Merchant x Karma",
-            path: "./assets/music/Anh-chang-the.mp3",
-            image:
-                "https://i3.ytimg.com/vi/mZcFsmN2YB4/hqdefault.jpg"
+            path: "./assets/music/Thay-the.mp3",
+            image: "./assets/image/avt1.jpg"
         },
         {
             name: "Chưa kịp nói lời yêu em",
             singer: "Raftaar x Fortnite",
             path: "./assets/music/Chua-kip-noi-loi-yeu-em.mp3",
-            image: "https://i.ytimg.com/vi/jTLhQf5KJSc/maxresdefault.jpg"
+            image: "./assets/image/avt2.png"
         },
         {
-            name: "Có em",
-            singer: "Raftaar x Salim Merchant x Karma",
-            path: "./assets/music/Co-em.mp3",
-            image:
-                "https://1.bp.blogspot.com/-kX21dGUuTdM/X85ij1SBeEI/AAAAAAAAKK4/feboCtDKkls19cZw3glZWRdJ6J8alCm-gCNcBGAsYHQ/s16000/Tu%2BAana%2BPhir%2BSe%2BRap%2BSong%2BLyrics%2BBy%2BRaftaar.jpg"
+            name: "Tương tư thành họa",
+            singer: "Quang Đăng Trần",
+            path: "./assets/music/tuong-tu-thanh-hoa.mp3",
+            image: "./assets/image/avt3.png"
         },
         {
-            name: "Những lời hứa bỏ quên",
+            name: "Lao tâm khổ tứ",
+            singer: "Raftaar x Nawazuddin Siddiqui",
+            path: "./assets/music/Lao-tam-kho-tu.mp3",
+            image: "./assets/image/avt4.png"
+        },
+        {
+            name: "Nhìn em lần cuối",
+            singer: "Raftaar x Nawazuddin Siddiqui",
+            path: "./assets/music/Nhin-em-lan-cuoi.mp3",
+            image: "./assets/image/avt5.png"
+        },
+        {
+            name: "Tay nắm tay rời",
+            singer: "Raftaar x Nawazuddin Siddiqui",
+            path: "./assets/music/Tay-nam-tay-roi.mp3",
+            image: "./assets/image/avt6.png"
+        },
+        {
+            name: "Nếu có thể quay về",
             singer: "Raftaar x Brobha V",
             path:
-                "./assets/music/Nhung-loi-hua-bo-quen.mp3",
-            image: "https://i.ytimg.com/vi/QvswgfLDuPg/maxresdefault.jpg"
+                "./assets/music/Neu-co-the-quay-ve.mp3",
+            image: "./assets/image/avt7.png"
         },
         {
-            name: "Vì anh có biết",
+            name: "Hoa son vàng",
             singer: "Raftaar x Nawazuddin Siddiqui",
-            path: "./assets/music/Vi-anh-co-biet.mp3",
-            image:
-                "https://a10.gaanacdn.com/images/song/39/24225939/crop_480x480_1536749130.jpg"
+            path: "./assets/music/Hoa-son-vang.mp3",
+            image: "./assets/image/avt8.png"
         },
         {
-            name: "Yêu em rất nhiều",
-            singer: "Raftaar",
-            path: "./assets/music/yeu-em-rat-nhieu.mp3",
-            image:
-                "https://a10.gaanacdn.com/images/albums/72/3019572/crop_480x480_3019572.jpg"
+            name: "Nợ nhau một lời",
+            singer: "Raftaar x Nawazuddin Siddiqui",
+            path: "./assets/music/No-nhau-mot-loi.mp3",
+            image: "./assets/image/avt9.png"
         },
         {
             name: "Lửng lơ",
             singer: "Raftaar",
             path: "./assets/music/Lung-lo.mp3",
-            image:
-                "https://a10.gaanacdn.com/images/albums/72/3019572/crop_480x480_3019572.jpg"
+            image: "./assets/image/avt10.png"
+        },
+        {
+            name: "Vì anh có biết",
+            singer: "Raftaar x Nawazuddin Siddiqui",
+            path: "./assets/music/Vi-anh-co-biet.mp3",
+            image: "./assets/image/avt11.png"
+        },
+        {
+            name: "Yêu em rất nhiều",
+            singer: "Raftaar",
+            path: "./assets/music/yeu-em-rat-nhieu.mp3",
+            image: "./assets/image/avt12.png"
         },
         {
             name: "Thời gian sẽ trả lời",
             singer: "Raftaar",
             path: "./assets/music/Thoi-gian-se-tra-loi.mp3",
-            image:
-                "https://a10.gaanacdn.com/images/albums/72/3019572/crop_480x480_3019572.jpg"
+            image: "./assets/image/avt13.png"
         },
         {
             name: "Lỗi duyên tại ý trời",
             singer: "Raftaar",
             path: "./assets/music/Loi-duyen-tai-y-troi.mp3",
-            image:
-                "https://a10.gaanacdn.com/images/albums/72/3019572/crop_480x480_3019572.jpg"
+            image: "./assets/image/avt14.png"
         },
         {
             name: "Em vội quên ",
             singer: "Raftaar x kr$na",
             path:
                 "./assets/music/Em-voi-quen.mp3",
-            image:
-                "https://i.ytimg.com/vi/QvswgfLDuPg/maxresdefault.jpg"
+            image: "./assets/image/avt15.png"
         },
         {
             name: "Nắng cũ",
             singer: "Raftaar x Harjas",
             path: "./assets/music/Nang-cu.mp3",
-            image:
-                "https://a10.gaanacdn.com/gn_img/albums/YoEWlabzXB/oEWlj5gYKz/size_xxl_1586752323.webp"
+            image: "./assets/image/avt5.png"
         },
         {
             name: "Rượu mừng hóa người dưng",
             singer: "Raftaar x Nawazuddin Siddiqui",
             path: "./assets/music/Ruou-mung-hoa-nguoi-dung.mp3",
-            image:
-                "https://a10.gaanacdn.com/images/song/39/24225939/crop_480x480_1536749130.jpg"
+            image: "./assets/image/avt10.png"
+        },
+        {
+            name: "Có em",
+            singer: "Raftaar x Nawazuddin Siddiqui",
+            path: "./assets/music/Co-em.mp3",
+            image: "./assets/image/avt2.png"
+        },
+        {
+            name: "Những lời hứa bỏ quên",
+            singer: "Raftaar x Brobha V",
+            path:
+                "./assets/music/Nhung-loi-hua-bo-quen.mp3",
+            image: "./assets/image/avt1.jpg"
+        },
+        {
+            name: "Anh chẳng thể",
+            singer: "Raftaar x Salim Merchant x Karma",
+            path: "./assets/music/Anh-chang-the.mp3",
+            image: "./assets/image/avt14.png"
         }
     ],
     render: function () {
@@ -337,5 +376,94 @@ const app = {
     }
 }
 app.start()
+
+// ----------------------------------------------------------------toast ----------------------------------------------------------------
+// Toast function
+function toast({ title = '', message = '', type = '', duration = 3000 }) {
+    const main = $('.toast-container')
+    if (main) {
+        const toast = document.createElement('div')
+        toast.classList.add('toast')
+        const icons = {
+            success: 'fa-solid fa-circle-check',
+            info: 'fa-solid fa-circle-info',
+            warning: 'fa-solid fa-triangle-exclamation',
+            error: 'fa-solid fa-triangle-exclamation'
+
+        }
+        // console.log(icons[succes])
+        toast.classList.add('toast', `toast--${type}`)
+        toast.style.animation = `slidEInLeft linear 0.5s, fadeOut linear 0.3s ${(duration / 1000).toFixed(2)}s forwards`
+        toast.innerHTML = `
+             <div class="toast-icon-check">
+                <i class="${icons[type]}"></i>
+            </div>
+            <div class="toast-body">
+                <h3 class="toast-title">${title}</h3>
+                <p class="toast-msg">${message}</p>
+            </div>
+            <div class="toast-close">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        `
+        main.appendChild(toast)
+        const autoRemoveId = setTimeout(() => {
+            main.removeChild(toast)
+        }, duration + 1000)
+        const closeBtn = toast.querySelector('.toast-close')
+        closeBtn.addEventListener('click', () => {
+            main.removeChild(toast)
+            clearTimeout(autoRemoveId)
+        })
+    }
+
+}
+
+function showSuccessToast() {
+    toast({
+        title: 'Thành công',
+        message: 'Bạn đã thành công mở thành công công',
+        type: 'success',
+        duration: 500000,
+
+    });
+}
+function showErrorToast() {
+    toast({
+        title: 'Thất bại',
+        message: 'Bạn đã Thất bại đéo mở thành công công',
+        type: 'error',
+        duration: 5000,
+
+    })
+}
+function showWarningToast() {
+    toast({
+        title: 'Cảnh báo',
+        message: 'Bạn đã rất ngu nên đéo mở thành công công',
+        type: 'warning',
+        duration: 5000,
+
+    })
+}
+function showInfoToast() {
+    toast({
+        title: 'Thông tin',
+        message: 'Bạn đã bị lộ thông tin để mở thành công công',
+        type: 'info',
+        duration: 5000,
+    })
+}
+// --------------------------------------------------------
+const tesst = $('.content.content-btn')
+// Bắt sự kiện scroll
+window.addEventListener('scroll', function () {
+    // Kiểm tra xem blockA có trong viewport không
+    const testPos = tesst.getBoundingClientRect()
+    // console.log(testPos.top, testPos.bottom, window.innerHeight)
+    if (Math.floor(testPos.bottom) <= window.innerHeight) {
+        console.log(1)
+    }
+});
 
 
