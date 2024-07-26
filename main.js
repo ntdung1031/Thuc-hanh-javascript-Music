@@ -190,7 +190,7 @@ const app = {
                 transform: 'rotate(360deg)'
             }
         ], {
-            duration: 10000,
+            duration: 15000,
             // easing: "linear",
             iterations: Infinity
         })
@@ -422,7 +422,7 @@ function showSuccessToast() {
         title: 'Thành công',
         message: 'Bạn đã thành công mở thành công công',
         type: 'success',
-        duration: 500000,
+        duration: 5000,
 
     });
 }
