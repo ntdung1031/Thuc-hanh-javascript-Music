@@ -376,7 +376,6 @@ const app = {
     }
 }
 app.start()
-
 // ----------------------------------------------------------------toast ----------------------------------------------------------------
 // Toast function
 function toast({ title = '', message = '', type = '', duration = 3000 }) {
@@ -418,7 +417,6 @@ function toast({ title = '', message = '', type = '', duration = 3000 }) {
     }
 
 }
-
 function showSuccessToast() {
     toast({
         title: 'Thành công',
