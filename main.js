@@ -76,6 +76,12 @@ const app = {
             image: "./assets/image/avt7.png"
         },
         {
+            name: "Em đừng đi",
+            singer: "Raftaar",
+            path: "./assets/music/Em-dung-di.mp3",
+            image: "./assets/image/avt2.png"
+        },
+        {
             name: "Hoa son vàng",
             singer: "Raftaar x Nawazuddin Siddiqui",
             path: "./assets/music/Hoa-son-vang.mp3",
@@ -100,6 +106,12 @@ const app = {
             image: "./assets/image/avt11.png"
         },
         {
+            name: "Hồng chiêu nguyện",
+            singer: "Raftaar",
+            path: "./assets/music/Hong-chieu-nguyen.mp3",
+            image: "./assets/image/avt17.png"
+        },
+        {
             name: "Yêu em rất nhiều",
             singer: "Raftaar",
             path: "./assets/music/yeu-em-rat-nhieu.mp3",
@@ -118,17 +130,18 @@ const app = {
             image: "./assets/image/avt14.png"
         },
         {
+            name: "Cạn tình như thế ",
+            singer: "Raftaar x kr$na",
+            path:
+                "./assets/music/Can-tinh-nhu-the.mp3",
+            image: "./assets/image/avt16.png"
+        },
+        {
             name: "Em vội quên ",
             singer: "Raftaar x kr$na",
             path:
                 "./assets/music/Em-voi-quen.mp3",
             image: "./assets/image/avt15.png"
-        },
-        {
-            name: "Nắng cũ",
-            singer: "Raftaar x Harjas",
-            path: "./assets/music/Nang-cu.mp3",
-            image: "./assets/image/avt5.png"
         },
         {
             name: "Rượu mừng hóa người dưng",
@@ -154,6 +167,12 @@ const app = {
             singer: "Raftaar x Salim Merchant x Karma",
             path: "./assets/music/Anh-chang-the.mp3",
             image: "./assets/image/avt14.png"
+        },
+        {
+            name: "Nắng cũ",
+            singer: "Raftaar x Harjas",
+            path: "./assets/music/Nang-cu.mp3",
+            image: "./assets/image/avt5.png"
         }
     ],
     render: function () {
