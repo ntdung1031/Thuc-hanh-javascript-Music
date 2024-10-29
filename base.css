@@ -1,0 +1,89 @@
+:root {
+    --primary-color: #ec1f55;
+    --text-color: #333;
+    --width-before-sound:100%;
+      --header-height : 120px;
+      --nav-height: 36px;
+      --search-height: calc(var(--header-height) - var(--nav-height));
+      --color-pri: rgb(234,73,74);
+      --color: rgb(72,41,45);
+      --yelo-color: rgb(244,181,63);
+      --bg-color:rgb(240,234,218);
+      --text-color:rgb(106,82,97);
+      --head-color: #48292d ;
+  }
+  
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+  }
+  
+  body {
+    background-color: #f5f5f5;
+  }
+  
+  html {
+    font-size:62.5%;
+    font-weight: 500;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  input::placeholder  {
+    color: #999;
+    font-style: italic;
+    font-size: 1.8rem;
+    line-height: 2rem;
+}
+.close {
+    display: none;
+}
+/* animation */
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+ }
+ @keyframes fadeIn2 {
+    from {
+        opacity: 0.5;
+    }
+    to {
+        opacity: 1;
+    }
+ }
+ @keyframes growths {
+    from {
+        opacity: 0;
+       transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+ }
+ @keyframes grow {
+    from {
+        opacity: 0;
+       transform: translateY(-70%)
+    }
+    to {
+        opacity: 1;
+        transform:translateY(0)
+    }
+ }
+
+ @keyframes shake {
+    0%,100% {
+         translate: 0;
+    }
+     25%, 75%{
+     translate: 4px;
+     }
+     50%{
+         translate: -4px;
+     }
+ }

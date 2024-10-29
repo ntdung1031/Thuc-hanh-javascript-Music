@@ -4,7 +4,6 @@ const $$ = document.querySelectorAll.bind(document);
 
 const PlAYER_STORAGE_KEY = "DUNG_LIST_MUSIC";
 
-
 const heading = $("header h2");
 const cdThumb = $(".cd-thumb");
 const audio = $("#audio");
@@ -18,6 +17,13 @@ const randomBtn = $(".btn-random");
 const repeatBtn = $(".btn-repeat");
 const playList = $(".playlist")
 const volume = $('#volume')
+// ---sign
+const sign = $$('.sign button')
+const modal = $$('.modal')
+const closeForm = $$('.close-form')
+let changSign = $$('.dont-SignIn a, .dont-SignUp a')
+
+
 
 const app = {
     currentIndex: 0,
@@ -203,7 +209,34 @@ const app = {
     handleEnvents: function () {
         _this = this
         const cdWidth = cd.offsetWidth
-
+        // sign.forEach((item, index) => {
+        //     item.onclick = function () {
+        //         console.log(index)
+        //     }
+        //     console.log(item)
+        // })
+        document.addEventListener('DOMContentLoaded', () => {
+        
+            sign.forEach((item, index) => {
+                item.onclick = function () {
+                    modal[index].style.display = 'block';
+                }
+            });
+            closeForm.forEach((item, index) => {
+                item.onclick = function () {
+                    modal[index].style.display = 'none';
+                }
+            });
+            // lật cái mảng què này lại
+            Array.from(changSign).reverse().forEach((item, index) => {
+                item.onclick = () => {
+                    modal.forEach((item, index) => {
+                        item.style.display = 'none';
+                    })
+                    modal[index].style.display = 'block';
+                }
+            })
+        });
         const cdThumAnimate = cdThumb.animate([
             {
                 transform: 'rotate(360deg)'
@@ -397,6 +430,14 @@ const app = {
 app.start()
 // ----------------------------------------------------------------toast ----------------------------------------------------------------
 // Toast function
+
+
+// submitSign.forEach((item, index) => { 
+//     item.onclick = function () {
+//         showSuccessToast()
+//     }
+// })
+
 function toast({ title = '', message = '', type = '', duration = 3000 }) {
     const main = $('.toast-container')
     if (main) {
@@ -439,7 +480,7 @@ function toast({ title = '', message = '', type = '', duration = 3000 }) {
 function showSuccessToast() {
     toast({
         title: 'Thành công',
-        message: 'Bạn đã thành công mở thành công công',
+        message: 'Bạn đã thành công tạo thành công tài khoản',
         type: 'success',
         duration: 5000,
 
@@ -472,15 +513,48 @@ function showInfoToast() {
     })
 }
 // --------------------------------------------------------
-const tesst = $('.content.content-btn')
+// const tesst = $('.content.content-btn')
 // Bắt sự kiện scroll
-window.addEventListener('scroll', function () {
-    // Kiểm tra xem blockA có trong viewport không
-    const testPos = tesst.getBoundingClientRect()
-    // console.log(testPos.top, testPos.bottom, window.innerHeight)
-    if (Math.floor(testPos.bottom) <= window.innerHeight) {
-        console.log(1)
-    }
-});
+// window.addEventListener('scroll', function () {
+//     // Kiểm tra xem blockA có trong viewport không
+//     const testPos = tesst.getBoundingClientRect()
+//     // console.log(testPos.top, testPos.bottom, window.innerHeight)
+//     if (Math.floor(testPos.bottom) <= window.innerHeight) {
+//         console.log(1)
+//     }
+// });
+
+
+
+
+// us---------------------------------------------------------------------------------------------------------------- err---
+    // const form = document.getElementById('signup-form');
+    const submitSign = $$('.btn-sign-in')
+console.log(submitSign)
+const formSumit = $$('.form')
+    document.getElementById('signup-form').addEventListener('submit', function (e) {
+        e.preventDefault(); // Ngăn chặn việc gửi form mặc định
+        console.log('Form submitted!'); // In ra m
+        // Lấy dữ liệu từ form
+        const formData = new FormData(this);
+
+        // Gửi dữ liệu bằng AJAX
+        fetch('add_user.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.text())
+        .then(data => {
+            // Hiển thị thông báo phản hồi từ server
+            // document.getElementById('response-message').innerHTML = data;
+            modal.forEach((item, index) => {
+                item.style.display = 'none';
+            })
+            modal[0].style.display = 'block';
+        showSuccessToast()
+
+        })
+        .catch(error => console.error('Lỗi:', error));
+    });
 
 

@@ -1,23 +1,4 @@
-:root {
-    --primary-color: #ec1f55;
-    --text-color: #333;
-    --width-before-sound:100%;
-  }
-  
-  * {
-    padding: 0;
-    margin: 0;
-    box-sizing: inherit;
-  }
-  
-  body {
-    background-color: #f5f5f5;
-  }
-  
-  html {
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-  }
+
   
   .player {
     position: relative;
@@ -60,7 +41,7 @@
   
   header h2 {
     color: var(--text-color);
-    font-size: 20px;
+    font-size: 2.7rem;
   }
   
   /* CD */
@@ -196,6 +177,8 @@
     justify-content: center;
     align-items: center;
     gap: 12px;
+    font-size: 1.8rem;
+    padding: 10px 0
 }
 .volume span {
   display: none;
@@ -206,7 +189,7 @@
   
   /* PLAYLIST */
   .playlist {
-    margin-top: 408px;
+    margin-top: 430px;
     padding: 12px 4px;
   }
   
@@ -219,6 +202,9 @@
     padding: 8px 16px;
     border-radius: 5px;
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+  }
+  .song:hover {
+    background-color: #f0f0f0;
   }
   
   .song.active {
@@ -405,5 +391,256 @@
     transform: translateX(30px);
   }
 }
+
+
+/* modal - sign in --------------- */
+/* modal */
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  animation: fadeIn  linear 0.2s;
+  z-index: 3;
+  /* display: none; */
+}
+.modal-lay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-body {
+  width: 600px;
+  background-color: var(--bg-color);
+  border-radius: 10px;
+  animation: grow linear 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 60px;
+  position: relative;
+}
+.close-form {
+  position: absolute;
+  top: 0;
+  right: -30px;
+  font-size: 3.3rem;
+  text-shadow: 1px 1px 16px #fff;
+  filter: brightness(0) saturate(100%) invert(42%) sepia(67%) saturate(3297%) hue-rotate(330deg) brightness(90%) contrast(105%);
+  cursor: pointer;   
+}
+.sign-in-img {
+  width: 200px;
+  height: unset;
+  user-select: none;
+  cursor: pointer;
+}
+
+.modal-signIn-title {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 40px;
+  color: var(--color-pri);
+  margin-top: 20px;
+  letter-spacing: 1px;
+}
+.modal-signIn-para {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  width: 90%;
+  text-align: center;
+  margin: 20px 0 30px;
+  line-height: 22px;
+}
+.form {
+  width: 100%;
+} 
+.group-form {
+  width: 100%;
+  margin-bottom: 12px;
+}
+.form-text-input {
+  border-radius: 10px;
+  border: 1px solid rgb(23, 187, 241);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 48px;
+  position: relative;
+}
+.form-text-input img {
+  position: absolute;
+  right: 10px;
+}
+.form-input {
+  height: 100%;
+  width: 100% ;
+  font-size: 2rem;
+  padding: 0 10px;
+  outline: none;
+  border-radius: 10px;
+    border: none;
+    font-weight: 500;
+} 
+
+.group-form:has(.form-input:invalid:not(:placeholder-shown)) .form-text-input{
+  border-color: #ed4337;
+} 
+.group-form:has(.form-input:invalid:not(:placeholder-shown)) .form-text-input .img-mess {
+  display: none;
+}
+.group-form:has(.form-input:invalid:not(:placeholder-shown)) .form-text-input .img-err,
+.group-form:has(.form-input:invalid:not(:placeholder-shown)) .form-err {
+  display: block;
+}
+
+.form-err {
+  display: none;   
+  color: #ed4337;
+  font-size: 1.4rem;
+  margin-top: 6px;
+  animation: fadeIn linear 0.2s;
+}
+.img-err {
+  display: none;
+  animation: shake linear 0.4s;
+}    
+.form-check {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.form-check label {
+  font-size: 1.6rem;
+  color: #888;
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+}
+.forgot-pass {
+  font-size: 1.6rem;
+  color: var(--primary-color);
+}
+.form-check label::before {
+  content: "";
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  border-radius: 4px;
+  border: 1px solid #9e9da8; 
+  background-color: #fff;
+}
+.form-check label::after {
+  content: "";
+    position: absolute;
+    width: 14.7px;
+    height: 9px;
+    border: 3px solid;
+    border-color: transparent transparent #fff #fff;
+    rotate: -45deg;
+    top: 5px;
+    left: 2px;
+}
+#checked-label:checked + label::before{
+  background-color: var(--primary-color);
+} 
+#checked-label-sign-up:checked + label::before {
+  background-color: var(--primary-color);
+}
+.btn-sign-in {
+  background-color: var(--primary-color);
+  color: #fff;
+  width: 100%;
+  height: 40px;
+  font-size: 1.8rem;
+  border-radius: 8px;
+  margin-top: 16px;
+  transition: opacity linear 0.3s;
+  border: none;  
+}
+.group-form:has(.form-input:invalid) ~ .btn-sign-in {
+  user-select: none;
+  opacity: 0.7;  
+  pointer-events: none;
+
+}
+.signIn-gg {
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;    
+  margin: 16px 0 26px;
+  border: 1px solid #d2d1d6;
+  border-radius: 8px;
+  cursor: pointer;
+  gap: 6px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.gg-desc {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+.dont-SignIn, .dont-SignUp {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #928f8f;
+  padding: 0 0 10px 0;
+}
+.dont-SignIn a,
+.dont-SignUp a {
+  color: var(--primary-color);
+}
+/* none modal sign in */
+.modal-sign-in {
+  display: none;
+}
+/* sign btn */
+.sign button {
+  font-size: 1.9rem;
+  padding: 11.5px 14px;
+  line-height: 17px;
+  border-radius: 10px;
+  font-weight: 500;
+}
+.sign-in:hover {
+  color: var(--primary-color);
+}
+.sign-up {
+  background-color: var(--primary-color);
+  color: #fff;
+  font-weight: 500;
+}
+.sign-up:hover {
+  opacity: 0.8;
+}
+
+/* -------------------------------------user----------------- */
+.user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+.user img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.user .name {
+  font-size: 1.8rem;
+  color: var(--text-color);
+}
+
 
   
