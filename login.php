@@ -53,8 +53,7 @@ $conn->close();
 ?>
 <?php
 session_start();
-echo '<pre>';
-print_r($_SESSION);
-echo '</pre>';
+header('Content-Type: application/json'); // Đảm bảo trả về JSON
+echo json_encode($_SESSION);
 ?>
 

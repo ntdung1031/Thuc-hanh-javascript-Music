@@ -641,6 +641,36 @@
   font-size: 1.8rem;
   color: var(--text-color);
 }
+/* avatar */
+.avatar {
+  position: relative;
+}
+.avt-list {
+  background-color: #fff ;
+  position: absolute;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+  width: 150px;
+  right: -15px;
+  /* height: 200px; */
+  top: 50px;
 
-
+}
+.avt-item button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 6px;
+  gap: 8px;
+  width: 100%;
+}
+.avt-item:hover {
+  background-color: #f0f0f0;
+}
+.change-avt {
+  font-size: 1.6rem;
+  color: var(--text-color);
+}
+.avt-item i {
+  font-size: 1.8rem;
+}
   

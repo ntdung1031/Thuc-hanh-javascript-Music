@@ -17,31 +17,64 @@
 </head>
 
 <body>
-<!-- <?php
+    <!-- <?php
 
 ?> -->
-    <div class="sign-parent fixed top-2 right-20 <?php session_start();  echo isset($_SESSION['username']) && $_SESSION['user_id'] ? 'close' : ''; ?>" >
+    <div
+        class="sign-parent fixed top-2 right-20 <?php session_start();  echo isset($_SESSION['username']) && $_SESSION['user_id'] ? 'close' : ''; ?>">
         <div class="sign flex gap-3 items-center">
             <button class="sign-in">Sign In</button>
             <button class="sign-up">Sign Up</button>
         </div>
     </div>
     <div class="user fixed top-2 right-20 flex">
-        <?php 
+    <?php 
         if(isset($_SESSION['username']) && $_SESSION['user_id']) {
-            echo '<p class="name">';
+           echo '<p class="name">';
             echo $_SESSION['username'];
             echo '</p>';
-            echo '<img src="./assets/image/avt1.jpg" alt="">';
+            echo '<div class="avatar">';
+            echo '<img src="./assets/image/avt1.jpg" alt="avt" class="avt-img">';
+            echo ' <ul class="avt-list close">
+                <li class="avt-item">
+                    <button class="btn-avt">
+                        <p class="change-avt">Đổi avatar</p>
+                        <i class="fa-solid fa-user-tie"></i>
+                    </button>
+                    <input type="file" accept="image/*" name="" id="fileAvatar" style="display:none">
+                </li>
+                <li class="avt-item">
+                    <button class="change-profile">
+                        <p class="change-avt">Sửa thông tin</p>
+                        <i class="fa-solid fa-user"></i>
+                        </button>
+                </li>
+                <li class="avt-item">
+                    <button class="change-profile" id="logout">
+                        <p class="change-avt">Đăng xuất</p>
+                        <i class="fa-solid fa-sign-out"></i>
+                    </button>
+                </li>
+                <li class="avt-item">
+                    <button class="add-music">
+                        <p class="change-avt">Thêm bài hát</p>
+                        <i class="fa-solid fa-music"></i>
+                    </button>
+                    <input type="file" accept="audio/*" name="" id="fileAvatar" style="display:none">
+                </li>
+            </ul>';
+            echo '</div>';
         }
         ?>
-        
     </div>
+
+  
+
     <?php
     // Include file PHP để tự động thực thi
     // include 'add_user.php'; // Hoặc require 'add_user.php';
     ?>
-    
+
 
 
     <div class="player ">
@@ -95,8 +128,8 @@
     </div>
 
     <!-- -------------------sign in  ---------------------------------------- -->
-     <!--  form sign IN -->
-     <div class="modal " style="display: none;" >
+    <!--  form sign IN -->
+    <div class="modal " style="display: none;">
         <div class="modal-lay">
             <div class="modal-sign-in-main modal-body">
                 <i class="fa-solid fa-xmark close-form"></i>
@@ -114,8 +147,8 @@
                     </div>
                     <div class="group-form">
                         <div class="form-text-input">
-                            <input type="password" name="signInpsw" class="form-input" placeholder="Password" minlength="6"
-                                required>
+                            <input type="password" name="signInpsw" class="form-input" placeholder="Password"
+                                minlength="6" required>
                             <img src="./assets/image/lock.svg" alt="" class="img-mess">
                             <img src="assets/image/form-error.svg" alt="" class="img-err">
                         </div>
@@ -140,8 +173,8 @@
     </div>
 
     <!-- ----------------------sign up ------------- -->
-       <!-- form signUp -->
-       <div class="modal" style="display: none;" >
+    <!-- form signUp -->
+    <div class="modal" style="display: none;">
         <div class="modal-lay">
             <div class="modal-sign-in-main modal-body">
                 <i class="fa-solid fa-xmark close-form"></i>
@@ -152,7 +185,7 @@
                     <div class="group-form">
                         <div class="form-text-input">
                             <input type="text" name="nameSignUp" class="form-input" placeholder="Name" required
-                            pattern="^[\p{L} ]+$">
+                                pattern="^[\p{L} ]+$">
                             <img src="./assets/image/message.svg" alt="" class="img-mess">
                             <img src="assets/image/form-error.svg" alt="" class="img-err">
                         </div>
@@ -169,8 +202,8 @@
                     </div>
                     <div class="group-form">
                         <div class="form-text-input">
-                            <input type="password" name="pswSignUp" class="form-input" placeholder="Password" minlength="6"
-                                required>
+                            <input type="password" name="pswSignUp" class="form-input" placeholder="Password"
+                                minlength="6" required>
                             <img src="./assets/image/lock.svg" alt="" class="img-mess">
                             <img src="assets/image/form-error.svg" alt="" class="img-err">
                         </div>
@@ -202,7 +235,7 @@
             </div>
         </div>
     </div>
-     <div class="toast-container content">
+    <div class="toast-container content">
     </div>
 
     <!-- <div class="c">
